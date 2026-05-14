@@ -4,24 +4,33 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:live": "concurrently -k \"npm run hub\" \"npm run dev\"",
+    "hub": "tsx scripts/live-hub.ts",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "dotenv": "^16.5.0",
+    "next": "15.5.18",
+    "openai": "^6.37.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.18"
+    "recharts": "^3.8.1",
+    "ws": "^8.18.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@types/ws": "^8.18.1",
+    "concurrently": "^9.1.2",
     "eslint": "^9",
     "eslint-config-next": "15.5.18",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "tsx": "^4.19.4",
+    "typescript": "^5"
   }
 }
