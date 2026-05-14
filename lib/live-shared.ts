@@ -27,7 +27,6 @@ export const BLUESKY_KEYWORDS = [
 
 /** Channel login names (no #). Active high-viewership streams for live chat volume. */
 export const TWITCH_CHANNELS = [
-  "asianjeff",
   "evelone2004",
   "ohnepixel",
   "anarabdullaev",
